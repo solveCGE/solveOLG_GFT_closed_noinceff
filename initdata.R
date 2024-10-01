@@ -1,5 +1,5 @@
 # number of cohorts
-ncoh = tend + (nag-1)
+ncoh = tend + (nag - 1)
 
 # parameters and counters
 vars_p  = c("alpha",       # capital-share parameter in production function
@@ -9,12 +9,12 @@ vars_p  = c("alpha",       # capital-share parameter in production function
             "rho",         # discount rate households
             "sigma",       # elasticity of intertemporal substitution
             "tt")          # time index
-initvars(timedep=F, agedep=F, vars_p)
+initvars(timedep = F, agedep = F, vars_p)
 
 # age-dependent variables
 vars_a  = c("parlv0",      # multiplicative shift parameter hours-disutillity
             "parlv1")      # additive shift parameter hours-disutillity
-initvars(timedep=F, agedep=T, vars_a)
+initvars(timedep = F, agedep = T, vars_a)
 
 # time-dependent variables
 vars_t  =  c("A",          # aggregate assets
@@ -60,7 +60,7 @@ vars_t  =  c("A",          # aggregate assets
              "tauprof",    # corporate tax rate
              "uck",        # user cost of capital
              "w")          # wage rate
-initvars(timedep=T, agedep=F, vars_t)
+initvars(timedep = T, agedep = F, vars_t)
 
 # age-dependent and time-dependent variables (with v and z suffix)
 vars_at =  c("A",          # assets
@@ -88,4 +88,4 @@ vars_at =  c("A",          # assets
              "theta",      # productivity (age-specific)
              "w",          # wage rate
              "y")          # per-period labor and pension income
-initvars(timedep=T, agedep=T, vars_at)
+initvars(timedep = T, agedep = T, vars_at)
